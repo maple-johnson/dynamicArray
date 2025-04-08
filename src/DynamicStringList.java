@@ -19,7 +19,10 @@ public class DynamicStringList implements StringList {
 
 
     // Size
-
+    public int size()
+    {
+        return 0;
+    }
 
     // Capacity
     
