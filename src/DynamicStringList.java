@@ -10,7 +10,10 @@ public class DynamicStringList implements StringList {
 
     
     // Add
-
+    public void add (String Value)
+    {
+        //
+    }
 
     // Remove
 
