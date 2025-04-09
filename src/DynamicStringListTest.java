@@ -94,6 +94,19 @@ public class DynamicStringListTest
         assertEquals("Sheva", actual);
     }
 
+    @Test
+    void testAdd_unavailableSpace()
+    {
+        // Arrange
+        String[] inputArray = {"Strabby", "Bunger", "Kweeble"};
+        DynamicStringList arr = new DynamicStringList(inputArray);
+        // Act
+        arr.add("Cinnasnail");
+        String actual = arr.get(3);
+        // Assert
+        assertEquals("Cinnasnail", actual);
+    }
+
 
     // ******************** Testing for Remove ********************
     @Test
