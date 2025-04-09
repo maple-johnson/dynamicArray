@@ -142,7 +142,19 @@ public class DynamicStringListTest
         assertEquals(null, dynamicArr.get(5));
     }
 
+
     // ******************** Testing for Size ********************
+    @Test
+    void testSize_null_Array()
+    {
+        // Arrange
+        String[] inputArray = new String[10];
+        DynamicStringList arr = new DynamicStringList(inputArray);
+        // Act
+        int actual = arr.size();
+        // Assert
+        assertEquals(0, actual);
+    }
 
 
     // ******************** Testing for Capacity ********************
