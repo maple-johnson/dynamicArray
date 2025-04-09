@@ -145,7 +145,7 @@ public class DynamicStringListTest
 
     // ******************** Testing for Size ********************
     @Test
-    void testSize_null_Array()
+    void testSize_nullArray()
     {
         // Arrange
         String[] inputArray = new String[10];
@@ -154,6 +154,18 @@ public class DynamicStringListTest
         int actual = arr.size();
         // Assert
         assertEquals(0, actual);
+    }
+
+    @Test
+    void testSize_partialNullArray()
+    {
+        // Arrange
+        String[] inputArr = {"Bluey", "Bingo", "Muffin", null, null};
+        DynamicStringList arr = new DynamicStringList(inputArr);
+        // Act
+        int actual = arr.size();
+        // Assert
+        assertEquals(3, actual);
     }
 
 
