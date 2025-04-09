@@ -83,7 +83,38 @@ public class DynamicStringListTest
 
 
     // ******************** Testing for Remove ********************
+    @Test
+    void testRemove_removeStart() {
+        //Arrange
+        String[] staticArr = {"Shadow Milk", "Dark Cacao", "Agar Agar", "Pancake", "Affogato", "Black Sapphire"};
+        DynamicStringList dynamicArr = new DynamicStringList(staticArr);
+        //Act
+        dynamicArr.remove(0);
+        //Assert
+        assertEquals("Dark Cacao", dynamicArr.get(0));
+    }
 
+    @Test
+    void testRemove_removeMiddle() {
+        //Arrange
+        String[] staticArr = {"Shadow Milk", "Dark Cacao", "Agar Agar", "Pancake", "Affogato", "Black Sapphire"};
+        DynamicStringList dynamicArr = new DynamicStringList(staticArr);
+        //Act
+        dynamicArr.remove(3);
+        //Assert
+        assertEquals("Affogato", dynamicArr.get(3));
+    }
+
+    @Test
+    void testRemove_removeEnd() {
+        //Arrange
+        String[] staticArr = {"Shadow Milk", "Dark Cacao", "Agar Agar", "Pancake", "Affogato", "Black Sapphire"};
+        DynamicStringList dynamicArr = new DynamicStringList(staticArr);
+        //Act
+        dynamicArr.remove(5);
+        //Assert
+        assertEquals(null, dynamicArr.get(5));
+    }
 
     // ******************** Testing for Size ********************
 

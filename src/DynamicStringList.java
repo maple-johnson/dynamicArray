@@ -75,12 +75,9 @@ public class DynamicStringList implements StringList {
         try{
             String removedString = arr[index];
             for(int i = index; i < arr.length-1; i++){
-                if(i+1 == arr.length-1){
-                    arr[i] = null;
-                } else {
-                    arr[i] = arr[i+1];
-                }
+                arr[i] = arr[i+1];
             }
+            arr[arr.length-1] = null;
             return removedString;
         } catch (IndexOutOfBoundsException e) {
             return "Not a valid index";
