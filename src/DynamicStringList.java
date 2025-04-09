@@ -1,10 +1,10 @@
 public class DynamicStringList implements StringList {
 
-    private String[] values;
+    private String[] arr;
 
-    public DynamicStringList(String[] values)
+    public DynamicStringList(String[] arr)
     {
-        values = this.values;
+        arr = this.arr;
     }
     
     // Get
@@ -12,7 +12,7 @@ public class DynamicStringList implements StringList {
     {
         try 
         {
-            return "";
+            return arr[index];
         } 
         catch (IndexOutOfBoundsException e) 
         {
