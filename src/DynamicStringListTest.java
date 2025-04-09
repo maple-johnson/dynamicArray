@@ -79,7 +79,20 @@ public class DynamicStringListTest
         assertEquals("Maroon", dynamicArr.get(7));
     }
 
+
     // ******************** Testing for Add ********************
+    @Test
+    void testAdd_availableSpace()
+    {
+        // Arrange
+        String[] inputArray = {"Clair", "Jill", "Rebecca", null, null};
+        DynamicStringList arr = new DynamicStringList(inputArray);
+        // Act
+        arr.add("Sheva");
+        String actual = arr.get(3);
+        // Assert
+        assertEquals("Sheva", actual);
+    }
 
 
     // ******************** Testing for Remove ********************
