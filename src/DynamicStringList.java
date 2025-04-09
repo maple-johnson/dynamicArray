@@ -40,8 +40,12 @@ public class DynamicStringList implements StringList {
     public String remove(int index) {
         try{
             String removedString = arr[index];
-            for(int i = index; i < arr.length; i++){
-                arr[i] = arr[i+1];
+            for(int i = index; i < arr.length-1; i++){
+                if(i+1 == arr.length-1){
+                    arr[i] = null;
+                } else {
+                    arr[i] = arr[i+1];
+                }
             }
             return removedString;
         } catch (IndexOutOfBoundsException e) {
