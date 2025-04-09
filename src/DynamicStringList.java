@@ -86,7 +86,17 @@ public class DynamicStringList implements StringList {
     // Size
     public int size()
     {
-        return 0;
+        int sizeCount = 0;
+
+        for (int i = 0; i < arr.length; i++) 
+        {
+            if (arr[i] != null)
+            {
+                sizeCount++;
+            }
+        }
+
+        return sizeCount;
     }
 
     // Capacity
