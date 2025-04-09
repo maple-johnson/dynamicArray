@@ -168,6 +168,18 @@ public class DynamicStringListTest
         assertEquals(3, actual);
     }
 
+    @Test
+    void testSize_fullArray()
+    {
+        // Arrange
+        String[] inputArr = {"Captain Marvel", "She Hulk", "Squirrel Girl"};
+        DynamicStringList arr = new DynamicStringList(inputArr);
+        // Act
+        int actual = arr.size();
+        // Assert
+        assertEquals(3, actual);
+    }
+
 
     // ******************** Testing for Capacity ********************
     @Test
