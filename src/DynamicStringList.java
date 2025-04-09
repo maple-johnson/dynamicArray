@@ -33,7 +33,7 @@ public class DynamicStringList implements StringList {
     // Add
     public void add (String value)
     {
-        if (arr[arr.length] == null) // If array not full
+        if (arr[arr.length -1] == null) // If array not full
         {
             // Find the first empty location, and add the value
             for (int i = 0; i < arr.length; i++) 
