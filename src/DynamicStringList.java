@@ -33,7 +33,41 @@ public class DynamicStringList implements StringList {
     // Add
     public void add (String value)
     {
-        //
+        if (arr[arr.length] == null) // If array not full
+        {
+            // Find the first empty location, and add the value
+            for (int i = 0; i < arr.length; i++) 
+            {
+                if (arr[i] == null)
+                {
+                    arr[i] = value;
+                }
+            }
+        }
+        else // if array full
+        {
+            // Create a new array
+            String[] tempArr = new String[arr.length * 2];
+
+            // Add all of the arr values into the temp array
+            for (int i = 0; i < arr.length; i++) 
+            {
+                tempArr[i] = arr[i];
+            }
+
+            // Add the new value
+            tempArr[arr.length] = value;
+
+            // Create new version of arr
+            arr =  new String[tempArr.length];
+
+            // Add all values in the temp array to the array
+            for (int i = 0; i < tempArr.length; i++) 
+            {
+                arr[i] = tempArr[i];
+            }
+
+        }
     }
 
     // Remove
