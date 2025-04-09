@@ -23,7 +23,11 @@ public class DynamicStringList implements StringList {
 
     // Set
     public void set(int index, String value) {
-
+        try {
+            arr[index] = value;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println(e);
+        }
     }
     
     // Add
