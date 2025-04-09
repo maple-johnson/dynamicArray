@@ -5,7 +5,18 @@ public class DynamicStringListTest
 {
 
     // ******************** Testing for Get ********************
-
+    @Test
+    void testGet_availableIndex()
+    {
+        // Arrange
+        String[] inputArray = {"Bulbasaur", "Ivysaur", "Venusaur"};
+        DynamicStringList arr = new DynamicStringList(inputArray);
+        int input = 1;
+        // Act
+        String actual = arr.get(input);
+        // Assert
+        assertEquals("Ivysaur", actual);
+    }
 
     // ******************** Testing for Set ********************
     @Test
