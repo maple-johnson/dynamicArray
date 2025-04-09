@@ -23,7 +23,11 @@ public class DynamicStringList implements StringList {
 
     // Set
     public void set(int index, String value) {
-
+        try {
+            arr[index] = value;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println(e);
+        }
     }
     
     // Add
@@ -68,7 +72,15 @@ public class DynamicStringList implements StringList {
 
     // Remove
     public String remove(int index) {
-        return "";
+        try{
+            String removedString = arr[index];
+            for(int i = index; i < arr.length; i++){
+                arr[i] = arr[i+1];
+            }
+            return removedString;
+        } catch (IndexOutOfBoundsException e) {
+            return "Not a valid index";
+        }
     }
 
     // Size
@@ -79,6 +91,6 @@ public class DynamicStringList implements StringList {
 
     // Capacity
     public int capacity() {
-        return 0;
+        return arr.length;
     }
 }
