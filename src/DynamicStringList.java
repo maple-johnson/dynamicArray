@@ -4,7 +4,7 @@ public class DynamicStringList implements StringList {
 
     public DynamicStringList(String[] arr)
     {
-        arr = this.arr;
+        this.arr = arr;
     }
     
     // Get
