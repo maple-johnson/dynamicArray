@@ -1,9 +1,24 @@
 public class DynamicStringList implements StringList {
 
+    private String[] values;
+
+    public DynamicStringList(String[] values)
+    {
+        values = this.values;
+    }
+    
     // Get
     public String get(int index)
     {
-        return "";
+        try 
+        {
+            return "";
+        } 
+        catch (IndexOutOfBoundsException e) 
+        {
+            return "Please input a number within the size of the array. " + e;
+        }
+        
     }
 
     // Set
@@ -12,7 +27,7 @@ public class DynamicStringList implements StringList {
     }
     
     // Add
-    public void add (String Value)
+    public void add (String value)
     {
         //
     }
