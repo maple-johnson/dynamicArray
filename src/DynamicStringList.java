@@ -7,7 +7,9 @@ public class DynamicStringList implements StringList {
     }
 
     // Set
+    public void set(int index, String value) {
 
+    }
     
     // Add
     public void add (String Value)
@@ -16,7 +18,9 @@ public class DynamicStringList implements StringList {
     }
 
     // Remove
-
+    public String remove(int index) {
+        return "";
+    }
 
     // Size
     public int size()
@@ -25,5 +29,7 @@ public class DynamicStringList implements StringList {
     }
 
     // Capacity
-    
+    public int capacity() {
+        return 0;
+    }
 }
