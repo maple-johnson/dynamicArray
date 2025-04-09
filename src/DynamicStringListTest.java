@@ -146,5 +146,44 @@ public class DynamicStringListTest
 
 
     // ******************** Testing for Capacity ********************
-    
+    @Test
+    void testCapacity_nullArray() {
+        //Arrange
+        String[] staticArr = new String[10];
+        DynamicStringList dynamicArr = new DynamicStringList(staticArr);
+        //Act
+        int actual = dynamicArr.capacity();
+        //Assert
+        assertEquals(10, actual);
+    }
+
+    @Test
+    void testCapacity_partialNullArray() {
+        //Arrange
+        String[] staticArr = new String[6];
+        staticArr[0] = "Yugi";
+        staticArr[1] = "Jonouchi";
+        staticArr[2] = "Anzu";
+        DynamicStringList dynamicArr = new DynamicStringList(staticArr);
+        //Act
+        int actual = dynamicArr.capacity();
+        //Assert
+        assertEquals(6, actual);
+    }
+
+    @Test
+    void testCapacity_fullArray() {
+        //Arrange
+        String[] staticArr = new String[5];
+        staticArr[0] = "Yugi";
+        staticArr[1] = "Jonouchi";
+        staticArr[2] = "Anzu";
+        staticArr[3] = "Honda";
+        staticArr[4] = "Seto";
+        DynamicStringList dynamicArr = new DynamicStringList(staticArr);
+        //Act
+        int actual = dynamicArr.capacity();
+        //Assert
+        assertEquals(5, actual);
+    }
 }
