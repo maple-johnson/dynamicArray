@@ -18,6 +18,32 @@ public class DynamicStringListTest
         assertEquals("Ivysaur", actual);
     }
 
+    // @Test
+    // void testGet_outOfBounds()
+    // {
+    //     // Arrange
+    //     String[] inputArray = {"Sora", "Donald", "Goofy"};
+    //     DynamicStringList arr = new DynamicStringList(inputArray);
+    //     int input = 9;
+    //     // Act
+    //     String actual = arr.get(input);
+    //     //Assert
+    //     assertThrows(IndexOutOfBoundsException, actual);
+    // }
+
+    @Test
+    void testGet_nullValue()
+    {
+        // Arrange
+        String[] inputArray  = {"Sora", "Donald", "Goofy", null};
+        DynamicStringList arr = new DynamicStringList(inputArray);
+        int input = 3;
+        // Act
+        String actual = arr.get(input);
+        // Assert
+        assertEquals(null, actual);
+    }
+
     // ******************** Testing for Set ********************
     @Test
     void testSet_SetStart() {
